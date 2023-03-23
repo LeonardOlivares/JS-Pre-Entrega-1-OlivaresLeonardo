@@ -2,6 +2,7 @@ let mensajeInicial = "Audiciones 'DanzArte'.\nPor favor indicanos a que área vi
 let opcion
 let tiempoEspera
 let nombreIngresado
+let numeroTurno
 
 function saludar() {
     nombreIngresado = prompt("Por favor ingrese su nombre")
@@ -52,5 +53,7 @@ function esperaAudicion(tiempoEsperaArea, lugarTurno) {
 } 
 
 saludar()
-let numeroTurno = Number(prompt("Ingresa el numero de turno que te tocó"))
+do {
+    numeroTurno = parseInt(prompt("Ingrese el numero de turno que le tocó"))
+} while (isNaN(numeroTurno))
 menuPrincipal() 
